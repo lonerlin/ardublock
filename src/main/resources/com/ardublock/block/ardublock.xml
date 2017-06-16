@@ -1971,7 +1971,13 @@
 				<text>Use the program to debounce</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"  />
+				<BlockConnector connector-type="number" connector-kind="plug" >
+
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+
 			</BlockConnectors>
 		</BlockGenus>
 
@@ -11765,6 +11771,7 @@
 				<BlockGenusMember>pinListDigital_D0</BlockGenusMember>
 				<BlockGenusMember>pinListAnalog_A0</BlockGenusMember>
 				<BlockGenusMember>pinListAnalogWrite_D3</BlockGenusMember>
+				<BlockGenusMember>debounce</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
