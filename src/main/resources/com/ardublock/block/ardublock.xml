@@ -1965,7 +1965,16 @@
 				<BlockConnector connector-type="number" connector-kind="plug"  />
 			</BlockConnectors>
 		</BlockGenus>
-		
+
+		<BlockGenus name="debounce" kind="function" color="222 131 51" initlabel="bg.debounce" editable-label="yes">
+			<description>
+				<text>Use the program to debounce</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="number_long" kind="data" color="255 153 204 " initlabel="bg.number_long" editable-label="yes">
 			<description>
 				<text>
