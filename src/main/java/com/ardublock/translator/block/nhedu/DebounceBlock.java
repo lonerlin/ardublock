@@ -9,12 +9,39 @@ import com.ardublock.translator.block.exception.SubroutineNotDeclaredException;
  */
 public class DebounceBlock extends TranslatorBlock{
 
+
+    public static final String NHEDU_DEBOUNCEBLOCK_DEFINE="const int debounceDelay=30;\n"+
+            "bool __debounce(int pin)\n" +
+            " {\n" +
+            "   bool state;\n" +
+            "   bool previousState;\n" +
+            "   pinMode(pinNumber, INPUT);\n"+
+            "   previousState=digitalRead(pin);\n" +
+            "   for(int counter=0;counter<debounceDelay;counter++)\n" +
+            "   {\n" +
+            "     delay(1);\n" +
+            "     state=digitalRead(pin);\n" +
+            "     if(state!=previousState)\n" +
+            "     {\n" +
+            "       counter=0;\n" +
+            "       previousState=state;\n" +
+            "     }\n" +
+            "   }\n" +
+            "   return state;\n" +
+            " }";
+
     public DebounceBlock(Long blockId, Translator translator, String codePrefix, String codeSuffix, String label)
     {
         super(blockId, translator, codePrefix, codeSuffix, label);
     }
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return null;
+        TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+        translator.addDefinitionCommand(NHEDU_DEBOUNCEBLOCK_DEFINE);
+
+        String ret = "__debounce(";
+        ret = ret + translatorBlock.toCode();
+        ret = ret + ")";
+        return codePrefix + ret + codeSuffix;
     }
 }
