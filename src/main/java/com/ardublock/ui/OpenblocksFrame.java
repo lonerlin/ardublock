@@ -8,6 +8,8 @@ import java.awt.FlowLayout;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -15,12 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -42,6 +39,7 @@ public class OpenblocksFrame extends JFrame
 	/**
 	 * 
 	 */
+
 	private static final long serialVersionUID = 2841155965906223806L;
 
 	private Context context;
@@ -49,7 +47,7 @@ public class OpenblocksFrame extends JFrame
 	private FileFilter ffilter;
 	
 	private ResourceBundle uiMessageBundle;
-	
+	boolean first=true;
 	public void addListener(OpenblocksFrameListener ofl)
 	{
 		context.registerOpenblocksFrameListener(ofl);
@@ -99,7 +97,11 @@ public class OpenblocksFrame extends JFrame
 		
 		// WTF I can't add worksapcelistener by workspace contrller
 		workspace.addWorkspaceListener(new ArdublockWorkspaceListener(this));
-		
+
+		//开关TpyeBlocking
+		workspace.enableTypeBlocking(true);
+
+
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new FlowLayout());
 		JButton newButton = new JButton(uiMessageBundle.getString("ardublock.ui.new"));
@@ -176,7 +178,25 @@ public class OpenblocksFrame extends JFrame
 		buttons.add(websiteButton);
 		bottomPanel.add(versionLabel);
 
-		
+		//Test SplitPane
+		/*
+		final JSplitPane splitPane=new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,true,workspace,new CodePanel());
+		splitPane.setOneTouchExpandable(true);
+		splitPane.setDividerLocation(0.85);
+		splitPane.setDividerSize(6);
+
+
+		this.add(splitPane,BorderLayout.CENTER);
+
+		this.addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentResized(ComponentEvent e) {
+
+				super.componentResized(e);
+
+			}
+		});
+		*/
 		this.add(buttons, BorderLayout.NORTH);
 		this.add(bottomPanel, BorderLayout.SOUTH);
 		this.add(workspace, BorderLayout.CENTER);
