@@ -1966,20 +1966,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="debounce" kind="function" color="222 131 51" initlabel="bg.debounce" editable-label="yes">
-			<description>
-				<text>Use the program to debounce</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" >
 
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" >
-					<DefaultArg genus-name="number" label="1" />
-				</BlockConnector>
-
-			</BlockConnectors>
-		</BlockGenus>
 
 		<BlockGenus name="number_long" kind="data" color="255 153 204 " initlabel="bg.number_long" editable-label="yes">
 			<description>
@@ -11083,6 +11070,54 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+
+		<!-- self-define Block -->
+
+		<BlockGenus name="debounce" kind="function" color="222 131 51" initlabel="bg.debounce" editable-label="yes">
+			<description>
+				<text>Use the program to debounce</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" >
+
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" >
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Stepper_Ini" kind="command" color="0 255 0" initlabel="bg.Stepper_Ini">
+			<description>
+				<text>Initializes a stepping motor module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="DuinoEDU_D9" label="D9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
+					<DefaultArg genus-name="number" label="3072" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<!--end self-define Block -->
+
 	</BlockGenuses>
 
 <!-- Start of Ardublock Standard UI layout -->
@@ -11771,7 +11806,7 @@
 				<BlockGenusMember>pinListDigital_D0</BlockGenusMember>
 				<BlockGenusMember>pinListAnalog_A0</BlockGenusMember>
 				<BlockGenusMember>pinListAnalogWrite_D3</BlockGenusMember>
-				<BlockGenusMember>debounce</BlockGenusMember>
+
 			</BlockDrawer>
 			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
@@ -12299,6 +12334,10 @@
 				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
 			</BlockDrawer>
 
+			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
+				<BlockGenusMember>debounce</BlockGenusMember>
+			</BlockDrawer>
+
 			<!--
 
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
@@ -12346,9 +12385,11 @@
 		<Page page-name="Main" page-width="400" page-color="128 128 128"/>
 	</Pages>
 
+
 	<TrashCan>
 		<OpenTrashImage>com/ardublock/block/trash_open.png</OpenTrashImage>
 		<ClosedTrashImage>com/ardublock/block/trash.png</ClosedTrashImage>
 	</TrashCan>
+
 
 </BlockLangDef>
