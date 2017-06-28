@@ -11093,20 +11093,23 @@
 				<text>Initializes a stepping motor module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
+					<DefaultArg genus-name="Stepper_Name" label="Stepper_1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
+					<DefaultArg genus-name="D8" label="D8" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D6" label="D6" />
+					<DefaultArg genus-name="D9" label="D9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D9" label="D9" />
+					<DefaultArg genus-name="D10" label="D10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="D11" label="D11" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
-					<DefaultArg genus-name="number" label="3072" />
+					<DefaultArg genus-name="number" label="1000" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -11116,6 +11119,27 @@
 			</Images>
 		</BlockGenus>
 
+		<BlockGenus name="Stepper_Write" kind="command" color="0 255 0" initlabel="bg.Stepper_Write">
+			<description>
+				<text>Stepper_setSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
+					<DefaultArg genus-name="Stepper_Name" label="Stepper_1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="SPEED">
+					<DefaultArg genus-name="Speed" label="200" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="STEP">
+					<DefaultArg genus-name="STEP" label="200" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+					<Image>
+						<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+					</Image>
+				</Images>
+		</BlockGenus>
 		<!--end self-define Block -->
 
 	</BlockGenuses>
