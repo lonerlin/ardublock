@@ -20,6 +20,30 @@ public class StepperBlock extends TranslatorBlock {
    }
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return null;
+        String StepperName;
+        String Pin1 ;
+        String Pin2 ;
+        String Pin3 ;
+        String Pin4 ;
+        String Stepperround;
+
+        TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+        StepperName = translatorBlock.toCode().replace("\"","");
+        translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
+        Pin1 = translatorBlock.toCode();
+        translatorBlock = this.getRequiredTranslatorBlockAtSocket(2);
+        Pin2 = translatorBlock.toCode();
+        translatorBlock = this.getRequiredTranslatorBlockAtSocket(3);
+        Pin3 = translatorBlock.toCode();
+        translatorBlock = this.getRequiredTranslatorBlockAtSocket(4);
+        Pin4 = translatorBlock.toCode();
+        translatorBlock = this.getRequiredTranslatorBlockAtSocket(5);
+        Stepperround = translatorBlock.toCode();
+
+
+        translator.addHeaderFile("Stepper.h");
+        translator.addDefinitionCommand("int nbrDePasParTour"+Pin1+" = "+Stepperround+";\n"+
+                "Stepper nhedu_"+StepperName+"(nbrDePasParTour"+Pin1+","+Pin1+","+Pin2+","+Pin3+","+Pin4+");");
+        return "";
     }
 }
