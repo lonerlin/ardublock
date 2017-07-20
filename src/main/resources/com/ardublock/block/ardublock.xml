@@ -11095,11 +11095,68 @@
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
 					<DefaultArg genus-name="message" label="RFID_1"/>
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_MOSI">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_SDA">
 					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_RST">
 					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/RFID.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="RFID_GetSerialNumber" initlabel="bg.RFID_GetSerialNumber" kind="function" color="0 255 0">
+			<description>
+				<text>ReadCard,return CardSerialNumber</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
+					<DefaultArg genus-name="message" label="RFID_1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/RFID.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="RFID_ReadCard" initlabel="bg.RFID_ReadCard" kind="function" color="0 255 0">
+			<description>
+				<text>Read One Section,return  data from 0,1,2 block </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" />
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
+					<DefaultArg genus-name="message" label="RFID_1"/>
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/RFID.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="RFID_WriteCard" initlabel="bg.RFID_WriteCard" kind="function" color="0 255 0">
+			<description>
+				<text>Write One Section  data ( 0,1,2 block) </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
+					<DefaultArg genus-name="message" label="RFID_1"/>
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
+					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_data">
+					<DefaultArg genus-name="message" label="Hello World!"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -12377,14 +12434,17 @@
 				<BlockGenusMember>midi_command</BlockGenusMember>
 				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
 			</BlockDrawer>
-
+			<!-- self-define BlockDrawer-->
 			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
 				<BlockGenusMember>Stepper_Ini</BlockGenusMember>
 				<BlockGenusMember>Stepper_step</BlockGenusMember>
 				<BlockGenusMember>RFID_Ini</BlockGenusMember>
+				<BlockGenusMember>RFID_GetSerialNumber</BlockGenusMember>
+				<BlockGenusMember>RFID_ReadCard</BlockGenusMember>
+				<BlockGenusMember>RFID_WriteCard</BlockGenusMember>
 				<BlockGenusMember>debounce</BlockGenusMember>
 			</BlockDrawer>
-
+			<!-- end self-define BlockDrawer-->
 			<!--
 
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
