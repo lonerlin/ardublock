@@ -1485,7 +1485,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="less" kind="function" color="222 131 51" initlabel="bg.less">
+		<BlockGenus name="less" kind="function"  color="222 131 51" initlabel="bg.less">
 			<description>
 				<text>is upper number less then lower?</text>
 			</description>
@@ -1499,7 +1499,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="equal" kind="function" color="222 131 51" initlabel="bg.equal">
+		<BlockGenus name="equal" kind="function"  color="222 131 51" initlabel="bg.equal">
 			<description>
 				<text>is upper number greater then lower?</text>
 			</description>
@@ -11087,56 +11087,76 @@
 
 			</BlockConnectors>
 		</BlockGenus>
-
+		<BlockGenus name="RFID_Ini" initlabel="bg.RFID_Ini" kind="command" color="0 255 0">
+			<description>
+				<text>Initializes a MFRC-522 RFID module</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
+					<DefaultArg genus-name="message" label="RFID_1"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_MOSI">
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_RST">
+					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/RFID.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<BlockGenus name="Stepper_Ini" kind="command" color="0 255 0" initlabel="bg.Stepper_Ini">
 			<description>
 				<text>Initializes a stepping motor module</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
-					<DefaultArg genus-name="Stepper_Name" label="Stepper_1" />
+					<DefaultArg genus-name="message" label="Stepper_1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="D8" label="D8" />
+					<DefaultArg genus-name="pinListDigital_D8" label="D8" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="D9" label="D9" />
+					<DefaultArg genus-name="pinListDigital_D9" label="D9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="D10" label="D10" />
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="D11" label="D11" />
+					<DefaultArg genus-name="pinListDigital_D11" label="D11" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepperround">
-					<DefaultArg genus-name="number" label="1000" />
+					<DefaultArg genus-name="number" label="200" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+					<FileLocation>com/ardublock/block/nhedu/stepper.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="Stepper_Write" kind="command" color="0 255 0" initlabel="bg.Stepper_Write">
+		<BlockGenus name="Stepper_step" kind="command" color="0 255 0" initlabel="bg.Stepper_Write">
 			<description>
-				<text>Stepper_setSpeed</text>
+				<text>Set step motor speed and number of steps</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
-					<DefaultArg genus-name="Stepper_Name" label="Stepper_1" />
+					<DefaultArg genus-name="message" label="Stepper_1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="SPEED">
-					<DefaultArg genus-name="Speed" label="200" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_speed">
+					<DefaultArg genus-name="number" label="60" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="STEP">
-					<DefaultArg genus-name="STEP" label="200" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_step">
+					<DefaultArg genus-name="number" label="200" />
 				</BlockConnector>
 			</BlockConnectors>
 				<Images>
 					<Image>
-						<FileLocation>com/ardublock/block/seeedstudio/stepper.png</FileLocation>
+						<FileLocation>com/ardublock/block/nhedu/stepper.png</FileLocation>
 					</Image>
 				</Images>
 		</BlockGenus>
@@ -11797,7 +11817,7 @@
 
 	<BlockDrawerSets>
 		<BlockDrawerSet name="factory" type="stack" location="southwest" window-per-drawer="no" drawer-draggable="no">
-			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
+			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="177 142 53">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>program</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
@@ -11832,7 +11852,7 @@
 				<BlockGenusMember>pinListAnalogWrite_D3</BlockGenusMember>
 
 			</BlockDrawer>
-			<BlockDrawer button-color="255 163 82" name="bd.logic" type="factory">
+			<BlockDrawer button-color="63 113 181" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
 				<BlockGenusMember>less</BlockGenusMember>
 				<BlockGenusMember>equal</BlockGenusMember>
@@ -12359,6 +12379,9 @@
 			</BlockDrawer>
 
 			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
+				<BlockGenusMember>Stepper_Ini</BlockGenusMember>
+				<BlockGenusMember>Stepper_step</BlockGenusMember>
+				<BlockGenusMember>RFID_Ini</BlockGenusMember>
 				<BlockGenusMember>debounce</BlockGenusMember>
 			</BlockDrawer>
 
