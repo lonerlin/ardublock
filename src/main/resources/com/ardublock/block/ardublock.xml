@@ -11073,6 +11073,67 @@
 
 		<!-- self-define Block -->
 
+		<BlockGenus name="ADXL335_AngleX" kind="function" color="195 130 0 " initlabel="bg.ADXL335_AngleX" editable-label="no">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_XPin">
+					<DefaultArg genus-name="pinListAnalog_A0" label="A0" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_YPin">
+					<DefaultArg genus-name="pinListAnalog_A1" label="A1" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_ZPin">
+					<DefaultArg genus-name="pinListAnalog_A2" label="A2" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/ADXL335.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="ADXL335_AngleY" kind="function" color="195 130 0 " initlabel="bg.ADXL335_AngleY" editable-label="no">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_XPin">
+					<DefaultArg genus-name="pinListAnalog_A0" label="A0" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_YPin">
+					<DefaultArg genus-name="pinListAnalog_A1" label="A1" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_ZPin">
+					<DefaultArg genus-name="pinListAnalog_A2" label="A2" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/ADXL335.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="ADXL335_AngleZ" kind="function" color="195 130 0 " initlabel="bg.ADXL335_AngleZ" editable-label="no">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug"  />
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_XPin">
+					<DefaultArg genus-name="pinListAnalog_A0" label="A0" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_YPin">
+					<DefaultArg genus-name="pinListAnalog_A1" label="A1" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.ADXL335_ZPin">
+					<DefaultArg genus-name="pinListAnalog_A2" label="A2" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/ADXL335.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
 		<BlockGenus name="debounce" kind="function" color="222 131 51" initlabel="bg.debounce" editable-label="yes">
 			<description>
 				<text>Use the program to debounce</text>
@@ -11217,12 +11278,51 @@
 					</Image>
 				</Images>
 		</BlockGenus>
+
+		<BlockGenus name="LCD_I2C_Print" kind="command" color="0 255 0" initlabel="bg.LCD_I2C_Print">
+			<description>
+				<text>Display string in the 1602 I2C screen</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.printString">
+					<DefaultArg genus-name="message" label="LCD I2C String"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.columnNumber">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.rowNumber">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/LCD_I2C.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<BlockGenus name="LCD_I2C_Clear" kind="command" color="0 255 0" initlabel="bg.LCD_I2C_Clear">
+		<description>
+			<text>Clear the screen</text>
+		</description>
+
+		</BlockGenus>
 		<!--end self-define Block -->
 
 	</BlockGenuses>
 
 <!-- Start of Ardublock Standard UI layout -->
 	<BlockFamilies>
+
+		<!--self-define BlockFamilies -->
+
+		<BlockFamily>
+			<FamilyMember>ADXL335_AngleX</FamilyMember>
+			<FamilyMember>ADXL335_AngleY</FamilyMember>
+			<FamilyMember>ADXL335_AngleZ</FamilyMember>
+		</BlockFamily>
+
+		<!--end self-define BlockFamilies -->
+
 		<BlockFamily>
 			<FamilyMember>digital-high</FamilyMember>
 			<FamilyMember>digital-low</FamilyMember>
@@ -12438,10 +12538,13 @@
 			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
 				<BlockGenusMember>Stepper_Ini</BlockGenusMember>
 				<BlockGenusMember>Stepper_step</BlockGenusMember>
+				<BlockGenusMember>LCD_I2C_Print</BlockGenusMember>
+				<BlockGenusMember>LCD_I2C_Clear</BlockGenusMember>
 				<BlockGenusMember>RFID_Ini</BlockGenusMember>
 				<BlockGenusMember>RFID_GetSerialNumber</BlockGenusMember>
 				<BlockGenusMember>RFID_ReadCard</BlockGenusMember>
 				<BlockGenusMember>RFID_WriteCard</BlockGenusMember>
+				<BlockGenusMember>ADXL335_AngleX</BlockGenusMember>
 				<BlockGenusMember>debounce</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
