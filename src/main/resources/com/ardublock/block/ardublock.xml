@@ -11142,8 +11142,11 @@
 				<BlockConnector connector-type="boolean" connector-kind="plug" >
 
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" >
-					<DefaultArg genus-name="number" label="1" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.debounce_inputPin">
+					<DefaultArg genus-name="pinListDigital_D1" label="D1" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.debounce_delayMillis">
+					<DefaultArg genus-name="number" label="30"/>
 				</BlockConnector>
 
 			</BlockConnectors>
