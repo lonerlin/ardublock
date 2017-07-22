@@ -13,6 +13,6 @@ public class ADXL335GetYAngleBlock extends ADXL335Block {
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
         super.toCode();
-        return codePrefix+"nhedu_adxl335.getAngle(Z)"+codeSuffix;
+        return codePrefix+"nhedu_adxl335.getAngle(Y)"+codeSuffix;
     }
 }

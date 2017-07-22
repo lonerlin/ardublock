@@ -24,7 +24,7 @@ public class ADXL335Block extends TranslatorBlock {
         pinY=translatorBlock.toCode();
         translatorBlock=this.getRequiredTranslatorBlockAtSocket(2);
         pinZ=translatorBlock.toCode();
-        translator.addDefinitionCommand("ADXL335 nhedu_adxl335(pinX,pinY,pinZ);");
+        translator.addDefinitionCommand("ADXL335 nhedu_adxl335("+pinX+","+pinY+","+pinZ+",5);");
         return "";
     }
 
