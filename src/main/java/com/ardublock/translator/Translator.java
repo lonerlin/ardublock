@@ -56,7 +56,7 @@ public class Translator
 		workspace = ws;
 		reset();
 	}
-	//添加头文件
+	//头文件
 	public String genreateHeaderCommand()
 	{
 		StringBuilder headerCommand = new StringBuilder();
@@ -215,7 +215,11 @@ public class Translator
 			guinoCommand.add(command);
 		
 	}
-	
+
+	/**
+	 * 添加自定义代码模块
+	 * @param 代码
+	 */
 	public void addDefinitionCommand(String command)
 	{
 		definitionSet.add(command);

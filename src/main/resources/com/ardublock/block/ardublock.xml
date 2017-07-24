@@ -11072,7 +11072,57 @@
 
 
 		<!-- self-define Block -->
-
+		<BlockGenus name="Decode_Type_RC5" initlabel="bg.Decode_Type_RC5" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Decode_Type_RC6" initlabel="bg.Decode_Type_RC6" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Decode_Type_NEC" initlabel="bg.Decode_Type_NEC" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Decode_Type_SONY" initlabel="bg.Decode_Type_SONY" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Decode_Type_PANASONIC" initlabel="bg.Decode_Type_PANASONIC" kind="data" color="232 156 149" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="IRSend" initlabel="bg.IRSend" kind="command" color="0 255 0" editable-label="no">
+			<description>
+				<text>IR Send</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.IRSendPin">
+					<DefaultArg genus-name="pinListDigital_D3" label="D3"  />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.Decode_Type">
+					<DefaultArg genus-name="Decode_Type_NEC" label="NEC"></DefaultArg>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.IRSendData">
+					<DefaultArg genus-name="number_long" label="0xFFFFFFFF" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.IRSendBits">
+					<DefaultArg genus-name="number" label="32"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/IR Transmitter.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
 		<BlockGenus name="ADXL335_AngleX" kind="function" color="195 130 0 " initlabel="bg.ADXL335_AngleX" editable-label="no">
 
 			<BlockConnectors>
@@ -11157,7 +11207,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="message" label="RFID_1"/>
+					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_SDA">
 					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
@@ -11179,7 +11229,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" />
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="message" label="RFID_1"/>
+					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -11195,7 +11245,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" />
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="message" label="RFID_1"/>
+					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
 				</BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
@@ -11214,7 +11264,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="message" label="RFID_1"/>
+					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
 				</BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
@@ -11235,7 +11285,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
-					<DefaultArg genus-name="message" label="Stepper_1" />
+					<DefaultArg genus-name="glue_msg" label="Stepper_1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="pinListDigital_D8" label="D8" />
@@ -11266,7 +11316,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.stepper_name">
-					<DefaultArg genus-name="message" label="Stepper_1" />
+					<DefaultArg genus-name="glue_msg" label="Stepper_1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.stepper_speed">
 					<DefaultArg genus-name="number" label="60" />
@@ -11324,6 +11374,13 @@
 			<FamilyMember>ADXL335_AngleZ</FamilyMember>
 		</BlockFamily>
 
+		<BlockFamily>
+			<FamilyMember>Decode_Type_RC5</FamilyMember>
+			<FamilyMember>Decode_Type_RC6</FamilyMember>
+			<FamilyMember>Decode_Type_NEC</FamilyMember>
+			<FamilyMember>Decode_Type_SONY</FamilyMember>
+			<FamilyMember>Decode_Type_PANASONIC</FamilyMember>
+		</BlockFamily>
 		<!--end self-define BlockFamilies -->
 
 		<BlockFamily>
@@ -12549,6 +12606,8 @@
 				<BlockGenusMember>RFID_WriteCard</BlockGenusMember>
 				<BlockGenusMember>ADXL335_AngleX</BlockGenusMember>
 				<BlockGenusMember>debounce</BlockGenusMember>
+				<BlockGenusMember>IRSend</BlockGenusMember>
+				<BlockGenusMember>Decode_Type_NEC</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--

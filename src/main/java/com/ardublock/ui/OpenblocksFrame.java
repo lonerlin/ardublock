@@ -170,8 +170,8 @@ public class OpenblocksFrame extends JFrame
 			    }
 			}
 		});
-		JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
-		
+		//JLabel versionLabel = new JLabel("v " + uiMessageBundle.getString("ardublock.ui.version"));
+		JLabel versionLabel = new JLabel("NHEDU ARDUBLOCK ( POWERED BY ARDUBLOCK " + uiMessageBundle.getString("ardublock.ui.version")+")");
 		//bottomPanel.add(saveImageButton);
 		//bottomPanel.add(websiteButton);
 		buttons.add(saveImageButton);
