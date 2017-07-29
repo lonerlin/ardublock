@@ -11072,6 +11072,8 @@
 
 
 		<!-- self-define Block -->
+
+		<!--IR Send -->
 		<BlockGenus name="Decode_Type_RC5" initlabel="bg.Decode_Type_RC5" kind="data" color="232 156 149" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="string"/>
@@ -11121,7 +11123,8 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		
+
+		<!--ADXL335-->
 		
 		<BlockGenus name="ADXL335_AngleX" kind="function" color="195 130 0 " initlabel="bg.ADXL335_AngleX" editable-label="no">
 
@@ -11201,6 +11204,8 @@
 
 			</BlockConnectors>
 		</BlockGenus>
+
+		<!--RFID -->
 		<BlockGenus name="RFID_Ini" initlabel="bg.RFID_Ini" kind="command" color="0 255 0">
 			<description>
 				<text>Initializes a MFRC-522 RFID module</text>
@@ -11279,6 +11284,8 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+
+		<!--Stepper -->
 		<BlockGenus name="Stepper_Ini" kind="command" color="0 255 0" initlabel="bg.Stepper_Ini">
 			<description>
 				<text>Initializes a stepping motor module</text>
@@ -11332,6 +11339,7 @@
 				</Images>
 		</BlockGenus>
 
+		<!--LCD_I2C -->
 		<BlockGenus name="LCD_I2C_Print" kind="command" color="0 255 0" initlabel="bg.LCD_I2C_Print">
 			<description>
 				<text>Display string in the 1602 I2C screen</text>
@@ -11359,6 +11367,56 @@
 		</description>
 
 		</BlockGenus>
+
+		<!--EasyFPM -->
+		<BlockGenus name="EasyFPM_Init" initlabel="bg.EasyFPM_Init" kind="function" color="0 255 0">
+			<description>
+				<text>FPM_Init</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.Pin_In">
+					<DefaultArg genus-name="pinListDigital_D2" label="D2" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.Pin_Out">
+					<DefaultArg genus-name="pinListDigital_D3" label="D3" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_Enroll" initlabel="bg.EasyFPM_Enroll" kind="function" color="0 255 0 ">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="number" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_Search" initlabel="bg.EasyFPM_Search" kind="function" color="0 255 0">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="number" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_EmptyDB" initlabel="bg.EasyFPM_EmptyDB" kind="function" color="0 255 0">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_Delete" initlabel="bg.EasyFPM_Delete" kind="function" color="0 255 0">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="boolean" />
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.FP_ID">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_GetCount" initlabel="bg.EasyFPM_GetCount" kind="function" color="0 255 0">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="number" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="EasyFPM_ErrorMessage" initlabel="bg.EasyFPM_ErrorMessage" kind="command" color="0 255 255"  >
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"  />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<!--end self-define Block -->
 
 	</BlockGenuses>
@@ -12608,6 +12666,13 @@
 				<BlockGenusMember>debounce</BlockGenusMember>
 				<BlockGenusMember>IRSend</BlockGenusMember>
 				<BlockGenusMember>Decode_Type_NEC</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_Init</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_Enroll</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_Search</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_EmptyDB</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_Delete</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_GetCount</BlockGenusMember>
+				<BlockGenusMember>ErrorMessage</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
