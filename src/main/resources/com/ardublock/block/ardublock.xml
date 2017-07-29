@@ -11368,7 +11368,7 @@
 
 		</BlockGenus>
 
-		<!--EasyFPM -->
+
 		<BlockGenus name="EasyFPM_Init" initlabel="bg.EasyFPM_Init" kind="function" color="0 255 0">
 			<description>
 				<text>FPM_Init</text>
@@ -11383,6 +11383,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="EasyFPM_Enroll" initlabel="bg.EasyFPM_Enroll" kind="function" color="0 255 0 ">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" />
@@ -11398,6 +11399,7 @@
 				<BlockConnector connector-kind="plug" connector-type="boolean" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="EasyFPM_Delete" initlabel="bg.EasyFPM_Delete" kind="function" color="0 255 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean" />
@@ -11411,12 +11413,12 @@
 				<BlockConnector connector-kind="plug" connector-type="number" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="EasyFPM_ErrorMessage" initlabel="bg.EasyFPM_ErrorMessage" kind="command" color="0 255 255"  >
+		<BlockGenus name="EasyFPM_ErrorMessage" initlabel="bg.EasyFPM_ErrorMessage" kind="data" color="0 255 255"  >
 			<BlockConnectors>
-				<BlockConnector connector-kind="plug" connector-type="string"  />
+				<BlockConnector connector-kind="plug" connector-type="string"/>
 			</BlockConnectors>
 		</BlockGenus>
-
+		<!--EasyFPM-->
 		<!--end self-define Block -->
 
 	</BlockGenuses>
@@ -12672,7 +12674,8 @@
 				<BlockGenusMember>EasyFPM_EmptyDB</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_Delete</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_GetCount</BlockGenusMember>
-				<BlockGenusMember>ErrorMessage</BlockGenusMember>
+				<BlockGenusMember>EasyFPM_ErrorMessage</BlockGenusMember>
+
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
