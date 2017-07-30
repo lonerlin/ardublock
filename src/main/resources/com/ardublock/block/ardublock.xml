@@ -11382,17 +11382,32 @@
 					<DefaultArg genus-name="pinListDigital_D3" label="D3" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="EasyFPM_Enroll" initlabel="bg.EasyFPM_Enroll" kind="function" color="0 255 0 ">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="EasyFPM_Search" initlabel="bg.EasyFPM_Search" kind="function" color="0 255 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="EasyFPM_EmptyDB" initlabel="bg.EasyFPM_EmptyDB" kind="function" color="0 255 0">
 			<BlockConnectors>
@@ -11407,11 +11422,21 @@
 					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="EasyFPM_GetCount" initlabel="bg.EasyFPM_GetCount" kind="function" color="0 255 0">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="EasyFPM_ErrorMessage" initlabel="bg.EasyFPM_ErrorMessage" kind="data" color="0 255 255"  >
 			<BlockConnectors>
