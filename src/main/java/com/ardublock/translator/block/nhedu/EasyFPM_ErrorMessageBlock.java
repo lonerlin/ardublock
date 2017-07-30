@@ -13,6 +13,6 @@ public class EasyFPM_ErrorMessageBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return null;
+        return codePrefix+"nhedu_efpm.ErrorMessage"+codeSuffix;
     }
 }

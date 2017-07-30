@@ -13,6 +13,9 @@ public class EasyFPM_DeleteBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return null;
+        String fID;
+        TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
+        fID=translatorBlock.toCode();
+        return codePrefix+"DeletePrint("+fID+")"+codeSuffix;
     }
 }

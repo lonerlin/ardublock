@@ -186,7 +186,7 @@
 			</arg-description>
           </description>
           <BlockConnectors>
-            <BlockConnector label="commands" connector-kind="socket" connector-type="cmd" />
+            <BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
             <BlockConnector label="bc.condition" connector-kind="socket" connector-type="boolean">
               <DefaultArg genus-name="less" label="Pick a test" />
             </BlockConnector>    
@@ -4093,6 +4093,11 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/DHT11.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
 		<BlockGenus name="df_dht11_humidity" kind="data" color="77 191 169" initlabel="bg.df_dht11_humidity">
@@ -4105,6 +4110,11 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/DHT11.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		
 		<BlockGenus name="df_romeo_motors" kind="command" color="255 102 0" initlabel="bg.df_romeo_motors">
@@ -11413,6 +11423,11 @@
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="boolean" />
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="EasyFPM_Delete" initlabel="bg.EasyFPM_Delete" kind="function" color="0 255 0">
@@ -11442,6 +11457,11 @@
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="string"/>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/FPM10A.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<!--EasyFPM-->
 		<!--end self-define Block -->

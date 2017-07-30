@@ -13,6 +13,6 @@ public class EasyFPM_EmptyDBBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return null;
+        return codePrefix+"nhedu_efpm.EmptyDB()"+codeSuffix;
     }
 }
