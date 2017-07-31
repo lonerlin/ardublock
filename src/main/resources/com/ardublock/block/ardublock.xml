@@ -11221,15 +11221,14 @@
 				<text>Initializes a MFRC-522 RFID module</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
-				</BlockConnector>
+
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_SDA">
 					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.RFID_RST">
 					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
 				</BlockConnector>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -11243,9 +11242,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" />
-				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
-				</BlockConnector>
+
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -11259,9 +11256,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="plug" />
-				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
-				</BlockConnector>
+
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
@@ -11278,9 +11273,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
-				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_name">
-					<DefaultArg genus-name="glue_msg" label="RFID_1"/>
-				</BlockConnector>
+
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>

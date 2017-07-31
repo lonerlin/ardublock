@@ -16,20 +16,28 @@ public class RFID_IniBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        String RFIDName;
+
         String PinMOSI;
         String PinRST;
         String ObjectName;
+        String ret;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
-        RFIDName=translatorBlock.toCode().replace("\"","");
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
+
         PinMOSI=translatorBlock.toCode();
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(2);
+        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
         PinRST=translatorBlock.toCode();
-        ObjectName="nhedu_" + RFIDName;
+        ObjectName="nhedu_RFID" ;
         translator.addHeaderFile("EasyRFID.h");
         translator.addDefinitionCommand("EasyRFID "+ ObjectName + "( " + PinMOSI +"," +PinRST + " );");
-        //translator.addSetupCommand(ObjectName+ ".init();");
-        return "";
+        ret="if(nhedu_RFID.checkCard())\n\t {";
+        translatorBlock = getTranslatorBlockAtSocket(2);
+        while (translatorBlock != null)
+        {
+            ret = ret + "\t"+translatorBlock.toCode();
+            translatorBlock = translatorBlock.nextTranslatorBlock();
+        }
+        ret = ret + "\t nhedu_RFID.halt();\n}\n\n";
+        return ret;
+
     }
 }

@@ -19,11 +19,10 @@ public class RFID_ReadCardBlock extends TranslatorBlock {
         String RFIDName;
         String SectionIndex;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
-        RFIDName=translatorBlock.toCode().replace("\"","");
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
+
         SectionIndex=translatorBlock.toCode();
 
-        String ret="nhedu_" +RFIDName+".readCard(" + SectionIndex + ")";
+        String ret="nhedu_RFID.readCard(" + SectionIndex + ")";
 
         return codePrefix+ ret+ codeSuffix;
     }

@@ -16,17 +16,16 @@ public class RFID_WriteCardBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        String RFIDName;
+
         String SectionIndex;
         String WriteData;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
-        RFIDName=translatorBlock.toCode().replace("\"","");
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
+
         SectionIndex=translatorBlock.toCode();
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(2);
+        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
         WriteData=translatorBlock.toCode();
 
-        String ret="nhedu_"+RFIDName+".writeCard("+SectionIndex+ ","+WriteData+")";
+        String ret="nhedu_RFID.writeCard("+SectionIndex+ ","+WriteData+")";
         return codePrefix+ret+codeSuffix;
     }
 }

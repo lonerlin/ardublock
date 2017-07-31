@@ -16,10 +16,8 @@ public class RFID_GetSerialNumberBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        String RFIDName;
-        TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
-        RFIDName=translatorBlock.toCode().replace("\"","");
-        String ret="nhedu_"+RFIDName+".getSerialNumber()";
+
+        String ret="nhedu_RFID.getSerialNumber()";
         return codePrefix+ret+codeSuffix;
     }
 }
