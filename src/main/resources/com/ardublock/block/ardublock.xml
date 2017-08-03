@@ -12141,10 +12141,12 @@
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
 				<BlockGenusMember>while</BlockGenusMember>
+				<!--
 				<BlockGenusMember>do_while</BlockGenusMember>
 				<BlockGenusMember>repeat_times</BlockGenusMember>
+				-->
 				<BlockGenusMember>repeat</BlockGenusMember>
-				<BlockGenusMember>repeat_control</BlockGenusMember>
+		<!--	<BlockGenusMember>repeat_control</BlockGenusMember>  -->
 				<BlockGenusMember>break</BlockGenusMember>
 				<BlockGenusMember>subroutine</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref</BlockGenusMember>
