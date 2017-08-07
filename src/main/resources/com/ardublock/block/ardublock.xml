@@ -11088,12 +11088,11 @@
 				<text>attachInterrupt</text>
 			</description>
 			<BlockConnectors>
-
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.InterruptPin">
 					<DefaultArg genus-name="pinListDigital_D2" label="D2" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.InterruptMode">
-					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.InterruptMode">
+					<DefaultArg genus-name="m_Rising" label="RISING" />
 				</BlockConnector>
 				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
@@ -11113,12 +11112,12 @@
 				<BlockConnector connector-kind="plug" connector-type="string"/>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="m_Falling" initlabel="bg.m_falling" kind="data" color="232 156 149">
+		<BlockGenus name="m_Falling" initlabel="bg.m_Falling" kind="data" color="232 156 149">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="string"/>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="detachInterrupt" initlabel="bg.dat" kind="" color="255 240 0">
+		<BlockGenus name="detachInterrupt" initlabel="bg.detachInterrupt" kind="command" color="255 240 0">
 			<description>
 				<text>attachInterrupt</text>
 			</description>
@@ -11511,6 +11510,12 @@
 	<BlockFamilies>
 
 		<!--self-define BlockFamilies -->
+		<BlockFamily>
+			<FamilyMember>m_Low</FamilyMember>
+			<FamilyMember>m_Change</FamilyMember>
+			<FamilyMember>m_Rising</FamilyMember>
+			<FamilyMember>m_Falling</FamilyMember>
+		</BlockFamily>
 
 		<BlockFamily>
 			<FamilyMember>ADXL335_AngleX</FamilyMember>
@@ -12199,6 +12204,9 @@
 				<BlockGenusMember>subroutine_var</BlockGenusMember>
 				<BlockGenusMember>subroutine-ref_var</BlockGenusMember>
 				<BlockGenusMember>ref_var</BlockGenusMember>
+				<BlockGenusMember>attachInterrupt</BlockGenusMember>
+				<BlockGenusMember>detachInterrupt</BlockGenusMember>
+				<BlockGenusMember>m_Rising</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
