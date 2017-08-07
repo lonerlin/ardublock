@@ -11082,7 +11082,53 @@
 
 
 		<!-- self-define Block -->
+			<!-- Interrupt-->
+		<BlockGenus name="attachInterrupt" initlabel="bg.attachInterrupt" kind="command" color="255 240 0">
+			<description>
+				<text>attachInterrupt</text>
+			</description>
+			<BlockConnectors>
 
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.InterruptPin">
+					<DefaultArg genus-name="pinListDigital_D2" label="D2" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.InterruptMode">
+					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
+				</BlockConnector>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="m_Low" initlabel="bg.m_Low" kind="data" color="232 156 149">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="m_Change" initlabel="bg.m_Change" kind="data" color="232 156 149">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="m_Rising" initlabel="bg.m_Rising" kind="data" color="232 156 149">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="m_Falling" initlabel="bg.m_falling" kind="data" color="232 156 149">
+			<BlockConnectors>
+				<BlockConnector connector-kind="plug" connector-type="string"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="detachInterrupt" initlabel="bg.dat" kind="" color="255 240 0">
+			<description>
+				<text>attachInterrupt</text>
+			</description>
+			<BlockConnectors>
+			<BlockConnector connector-type="number" connector-kind="socket" label="bc.InterruptPin">
+				<DefaultArg genus-name="pinListDigital_D2" label="D2" />
+			</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<!-- End Interrupt-->
 		<!--IR Send -->
 		<BlockGenus name="Decode_Type_RC5" initlabel="bg.Decode_Type_RC5" kind="data" color="232 156 149" editable-label="no">
 			<BlockConnectors>
