@@ -22,13 +22,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import com.ardublock.core.Context;
-import com.ardublock.ui.listener.ArdublockWorkspaceListener;
-import com.ardublock.ui.listener.GenerateCodeButtonListener;
-import com.ardublock.ui.listener.NewButtonListener;
-import com.ardublock.ui.listener.OpenButtonListener;
-import com.ardublock.ui.listener.OpenblocksFrameListener;
-import com.ardublock.ui.listener.SaveAsButtonListener;
-import com.ardublock.ui.listener.SaveButtonListener;
+import com.ardublock.ui.listener.*;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
@@ -147,10 +141,13 @@ public class OpenblocksFrame extends JFrame
 			}
 		});
 
+		JButton sendCodeButton=new JButton(uiMessageBundle.getString("ardublock.ui.sendCode"));
+		sendCodeButton.addActionListener(new SendCodeButtonListener(this,context));
 		buttons.add(newButton);
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
 		buttons.add(openButton);
+		buttons.add(sendCodeButton);
 		buttons.add(generateButton);
 		buttons.add(serialMonitorButton);
 
