@@ -3,9 +3,10 @@ package com.ardublock;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import org.xml.sax.SAXException;
 
 import com.ardublock.core.Context;
@@ -18,6 +19,16 @@ public class Main
 
 	public static void main(String args[]) throws SAXException, IOException, ParserConfigurationException
 	{
+		try
+		{
+			BeautyEyeLNFHelper.frameBorderStyle=BeautyEyeLNFHelper.FrameBorderStyle.translucencySmallShadow;
+			UIManager.put("RootPane.setupButtonVisible", false);
+			org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+		}
+		catch(Exception e)
+		{
+			//TODO exception
+		}
 		Main me = new Main();
 		me.startArdublock();
 	}
