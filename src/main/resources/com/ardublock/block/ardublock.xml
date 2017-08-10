@@ -11305,6 +11305,9 @@
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
 				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_blockIndex">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
@@ -11321,6 +11324,9 @@
 
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_sectionIndex">
 					<DefaultArg genus-name="number" label="1"/>
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.RFID_blockIndex">
+					<DefaultArg genus-name="number" label="0"/>
 				</BlockConnector>
 				<BlockConnector connector-kind="socket" connector-type="string" label="bc.RFID_data">
 					<DefaultArg genus-name="message" label="Hello World!"/>

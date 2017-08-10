@@ -16,13 +16,15 @@ public class RFID_ReadCardBlock extends TranslatorBlock {
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        String RFIDName;
+
         String SectionIndex;
+        String BlockIndex;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
 
         SectionIndex=translatorBlock.toCode();
-
-        String ret="nhedu_RFID.readCard(" + SectionIndex + ")";
+        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
+        BlockIndex=translatorBlock.toCode();
+        String ret="nhedu_RFID.readCard(" + SectionIndex +"," + BlockIndex +")";
 
         return codePrefix+ ret+ codeSuffix;
     }
