@@ -19,16 +19,7 @@ public class Main
 
 	public static void main(String args[]) throws SAXException, IOException, ParserConfigurationException
 	{
-		try
-		{
-			BeautyEyeLNFHelper.frameBorderStyle=BeautyEyeLNFHelper.FrameBorderStyle.translucencySmallShadow;
-			UIManager.put("RootPane.setupButtonVisible", false);
-			org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
-		}
-		catch(Exception e)
-		{
-			//TODO exception
-		}
+
 		Main me = new Main();
 		me.startArdublock();
 	}

@@ -26,6 +26,7 @@ import com.ardublock.ui.listener.*;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 
 public class OpenblocksFrame extends JFrame
@@ -60,6 +61,19 @@ public class OpenblocksFrame extends JFrame
 	
 	public OpenblocksFrame()
 	{
+		/*
+		try
+		{
+			System.out.println("BeautyEye...");
+			BeautyEyeLNFHelper.frameBorderStyle=BeautyEyeLNFHelper.FrameBorderStyle.translucencySmallShadow;
+			UIManager.put("RootPane.setupButtonVisible", false);
+			org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.launchBeautyEyeLNF();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		*/
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
 		this.setSize(new Dimension(1024, 760));
@@ -94,6 +108,7 @@ public class OpenblocksFrame extends JFrame
 
 		//开关TpyeBlocking
 		workspace.enableTypeBlocking(true);
+
 
 
 		JPanel buttons = new JPanel();
@@ -147,7 +162,7 @@ public class OpenblocksFrame extends JFrame
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
 		buttons.add(openButton);
-		buttons.add(sendCodeButton);
+		//buttons.add(sendCodeButton);
 		buttons.add(generateButton);
 		buttons.add(serialMonitorButton);
 
