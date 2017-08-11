@@ -21,12 +21,13 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+
 import com.ardublock.core.Context;
 import com.ardublock.ui.listener.*;
 
 import edu.mit.blocks.controller.WorkspaceController;
 import edu.mit.blocks.workspace.Workspace;
-import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
 
 
 public class OpenblocksFrame extends JFrame
@@ -74,6 +75,7 @@ public class OpenblocksFrame extends JFrame
 			System.out.println(e.toString());
 		}
 		*/
+
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
 		this.setSize(new Dimension(1024, 760));
