@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: jfreechart-1.0.13.jar beautyeye_lnf.jar jcommon-1.0.16.jar
+Main-Class: com.ardublock.Main
+

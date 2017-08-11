@@ -71,7 +71,7 @@ public class OpenblocksFrame extends JFrame
 		}
 		catch(Exception e)
 		{
-			System.out.println(e.getMessage());
+			System.out.println(e.toString());
 		}
 		*/
 		context = Context.getContext();
@@ -162,7 +162,7 @@ public class OpenblocksFrame extends JFrame
 		buttons.add(saveButton);
 		buttons.add(saveAsButton);
 		buttons.add(openButton);
-		//buttons.add(sendCodeButton);
+		buttons.add(sendCodeButton);
 		buttons.add(generateButton);
 		buttons.add(serialMonitorButton);
 
