@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
+<PageBlocks>
+<Block genus-name="number" id="153">
+<Label>1000</Label>
+<Location>
+<X>416</X>
+<Y>417</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="152" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="delay" id="152">
+<Location>
+<X>338</X>
+<Y>414</Y>
+</Location>
+<BeforeBlockId>145</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="153" connector-kind="socket" connector-type="number" init-type="number" label="毫秒" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="Stepper_step" id="145">
+<Location>
+<X>338</X>
+<Y>314</Y>
+</Location>
+<BeforeBlockId>149</BeforeBlockId>
+<AfterBlockId>152</AfterBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="146" connector-kind="socket" connector-type="string" init-type="string" label="步进电机名称" position-type="single"/>
+<BlockConnector con-block-id="147" connector-kind="socket" connector-type="number" init-type="number" label="速度" position-type="single"/>
+<BlockConnector con-block-id="148" connector-kind="socket" connector-type="number" init-type="number" label="步数" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="148">
+<Label>200</Label>
+<Location>
+<X>552</X>
+<Y>365</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="145" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="147">
+<Label>60</Label>
+<Location>
+<X>552</X>
+<Y>341</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="145" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="146">
+<Label>Stepper_1</Label>
+<Location>
+<X>552</X>
+<Y>317</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="145" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="repeat" id="149">
+<Location>
+<X>189</X>
+<Y>258</Y>
+</Location>
+<BeforeBlockId>138</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="150" connector-kind="socket" connector-type="number" init-type="number" label="变量" position-type="single"/>
+<BlockConnector con-block-id="151" connector-kind="socket" connector-type="number" init-type="number" label="次数" position-type="single"/>
+<BlockConnector con-block-id="145" connector-kind="socket" connector-type="cmd" init-type="cmd" label="执行" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="151">
+<Label>5</Label>
+<Location>
+<X>341</X>
+<Y>285</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="149" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="150">
+<Label>variable name</Label>
+<Location>
+<X>341</X>
+<Y>261</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="149" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="Stepper_Ini" id="138">
+<Location>
+<X>189</X>
+<Y>108</Y>
+</Location>
+<BeforeBlockId>137</BeforeBlockId>
+<AfterBlockId>149</AfterBlockId>
+<Sockets num-sockets="6">
+<BlockConnector con-block-id="139" connector-kind="socket" connector-type="string" init-type="string" label="步进电机名称" position-type="single"/>
+<BlockConnector con-block-id="140" connector-kind="socket" connector-type="number" init-type="number" label="针脚#" position-type="single"/>
+<BlockConnector con-block-id="141" connector-kind="socket" connector-type="number" init-type="number" label="针脚#" position-type="single"/>
+<BlockConnector con-block-id="142" connector-kind="socket" connector-type="number" init-type="number" label="针脚#" position-type="single"/>
+<BlockConnector con-block-id="143" connector-kind="socket" connector-type="number" init-type="number" label="针脚#" position-type="single"/>
+<BlockConnector con-block-id="144" connector-kind="socket" connector-type="number" init-type="number" label="每转步进数" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="144">
+<Label>200</Label>
+<Location>
+<X>377</X>
+<Y>231</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="pinListDigital_D11" id="143">
+<Location>
+<X>377</X>
+<Y>207</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="pinListDigital_D10" id="142">
+<Location>
+<X>377</X>
+<Y>183</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="pinListDigital_D9" id="141">
+<Location>
+<X>377</X>
+<Y>159</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="pinListDigital_D8" id="140">
+<Location>
+<X>377</X>
+<Y>135</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="139">
+<Label>Stepper_1</Label>
+<Location>
+<X>377</X>
+<Y>111</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="138" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="137">
+<Location>
+<X>100</X>
+<Y>100</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="138" connector-kind="socket" connector-type="cmd" init-type="cmd" label="执行" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
