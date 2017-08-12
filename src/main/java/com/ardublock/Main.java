@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.swing.*;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
 import org.xml.sax.SAXException;
 
 import com.ardublock.core.Context;
