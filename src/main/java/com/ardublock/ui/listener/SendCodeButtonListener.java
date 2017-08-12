@@ -29,6 +29,7 @@ public class SendCodeButtonListener extends GenerateCodeButtonListener {
             {
                 System.out.println(codeOut);
             }
+            
             context.didSendCode(codeOut);
         }
     }
