@@ -11338,7 +11338,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
+		<!--end RFID -->
 		<!--Stepper -->
 		<BlockGenus name="Stepper_Ini" kind="command" color="0 255 0" initlabel="bg.Stepper_Ini">
 			<description>
@@ -11392,6 +11392,7 @@
 					</Image>
 				</Images>
 		</BlockGenus>
+		<!--end Stepper -->
 
 		<!--LCD_I2C -->
 		<BlockGenus name="LCD_I2C_Print" kind="command" color="0 255 0" initlabel="bg.LCD_I2C_Print">
@@ -11421,8 +11422,9 @@
 		</description>
 
 		</BlockGenus>
+		<!--end LCD_I2C-->
 
-
+		<!--EasyFPM-->
 		<BlockGenus name="EasyFPM_Init" initlabel="bg.EasyFPM_Init" kind="function" color="0 255 0">
 			<description>
 				<text>FPM_Init</text>
@@ -11507,7 +11509,8 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<!--EasyFPM-->
+		<!--End EasyFPM-->
+		
 		<!--end self-define Block -->
 
 	</BlockGenuses>
