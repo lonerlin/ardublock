@@ -11082,7 +11082,30 @@
 
 
 		<!-- self-define Block -->
-			<!-- Interrupt-->
+
+		<BlockGenus name="MotorShield" initlabel="bg.MotorShield" kind="command" color="0 255 0">
+			<description>
+				<text>L298P Motor shield,it can control two motor </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.Motor">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="boolean" label="bc.Direction">
+					<DefaultArg genus-name="true" label="true" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.SpeedNumber">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<!-- Interrupt-->
 		<BlockGenus name="attachInterrupt" initlabel="bg.attachInterrupt" kind="command" color="255 240 0">
 			<description>
 				<text>attachInterrupt</text>
@@ -12392,7 +12415,7 @@
 			</BlockDrawer>
 			-->
 
-			<!--
+
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
@@ -12636,8 +12659,8 @@
 				<BlockGenusMember>me_motor_1</BlockGenusMember>
 				<BlockGenusMember>me_shutter_1</BlockGenusMember>
 			</BlockDrawer>
-			-->
-			<!-- 
+
+
 			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
 			    <BlockGenusMember>ws_setting</BlockGenusMember>
 			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
@@ -12656,8 +12679,8 @@
 				<BlockGenusMember>ws_danger</BlockGenusMember>
 				<BlockGenusMember>ws_binoculars</BlockGenusMember>
 			</BlockDrawer>
-			 -->
-			<!--
+
+
 			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
 			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
 			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
@@ -12666,9 +12689,10 @@
 			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
-			-->
+
 			<!-- iDrawing -->
-			<!--
+
+
 			<BlockDrawer button-color="255 102 0" name="bd.iDrawing">
 			    <BlockGenusMember>iDrawing_set_para</BlockGenusMember>
 			    <BlockGenusMember>iDrawing_run</BlockGenusMember>
@@ -12697,9 +12721,11 @@
 			    <BlockGenusMember>trigger_greater</BlockGenusMember>
 			    <BlockGenusMember>trigger_less</BlockGenusMember>		    
 			</BlockDrawer>
-			-->
+
+
 			<!-- littlebits -->
-			<!--
+
+
 			<BlockDrawer button-color="93 13 125" name="bd.littlebits">
 			    <BlockGenusMember>little_bits_bendsensor</BlockGenusMember>
 			    <BlockGenusMember>little_bits_button</BlockGenusMember>
@@ -12734,7 +12760,8 @@
 			    <BlockGenusMember>little_bits_vibration_motor</BlockGenusMember>
 			    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
 			</BlockDrawer>
-			-->
+
+
 			<!-- dbrobot bluno Causes warning "Invalid Drawer: trying to add a drawer that already exists: DFRobot" -->
 <!-- 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory"> -->
 <!-- 				<BlockGenusMember>bluno_println</BlockGenusMember> -->
@@ -12745,7 +12772,8 @@
 <!-- 				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember> -->
 <!-- 			</BlockDrawer> 	 -->
 			<!-- keenlon -->
-			<!--
+
+
 			<BlockDrawer button-color="20 150 30" name="bd.ke-keenlon">
 				<BlockGenusMember>ke-motor-run</BlockGenusMember>
 				<BlockGenusMember>ke-motor-setmoto</BlockGenusMember>	
@@ -12774,7 +12802,8 @@
 				<BlockGenusMember>ke-psd</BlockGenusMember>								
 				<BlockGenusMember>ke-servo</BlockGenusMember>																		
 			</BlockDrawer> 	
-			-->
+
+
 			<!--
 			<BlockDrawer button-color="152 29 155" name="bd.jerusalab" type="factory">
 				<BlockGenusMember>midi_command</BlockGenusMember>
@@ -12785,6 +12814,7 @@
 			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
 				<BlockGenusMember>Stepper_Ini</BlockGenusMember>
 				<BlockGenusMember>Stepper_step</BlockGenusMember>
+				<BlockGenusMember>MotorShield</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Print</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Clear</BlockGenusMember>
 				<BlockGenusMember>RFID_Ini</BlockGenusMember>
@@ -12840,7 +12870,7 @@
 				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember>
 				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
 			</BlockDrawer>
-				-->
+			-->
 			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
 			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
