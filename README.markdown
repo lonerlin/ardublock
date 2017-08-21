@@ -1,6 +1,8 @@
 ArduBlock
 ======
 
+新的修改：为了适应Arduino1.8,做了一些接口的修改，根据应用的实际情况，添加了一些模块，对一些模块进行中文的翻译。
+
 ArduBlock is a Block Programming Language for Arduino. The language and functions model closely to [Arduino Language Reference](http://arduino.cc/en/Reference/HomePage)
 
 Installation
