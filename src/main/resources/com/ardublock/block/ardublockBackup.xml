@@ -12415,7 +12415,7 @@
 			</BlockDrawer>
 			-->
 
-			<!--
+
 			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
 				<BlockGenusMember>Tinker_LED</BlockGenusMember>
 				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
@@ -12689,8 +12689,8 @@
 			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
 			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
 			</BlockDrawer>
-				-->
-			<!--
+
+			<!-- iDrawing -->
 
 
 			<BlockDrawer button-color="255 102 0" name="bd.iDrawing">
@@ -12723,7 +12723,7 @@
 			</BlockDrawer>
 
 
-
+			<!-- littlebits -->
 
 
 			<BlockDrawer button-color="93 13 125" name="bd.littlebits">
@@ -12761,7 +12761,6 @@
 			    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
 			</BlockDrawer>
 
-			-->
 
 			<!-- dbrobot bluno Causes warning "Invalid Drawer: trying to add a drawer that already exists: DFRobot" -->
 <!-- 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory"> -->
@@ -12772,8 +12771,8 @@
 <!-- 				<BlockGenusMember>df_romeo_motor</BlockGenusMember> -->
 <!-- 				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember> -->
 <!-- 			</BlockDrawer> 	 -->
+			<!-- keenlon -->
 
-			<!--
 
 			<BlockDrawer button-color="20 150 30" name="bd.ke-keenlon">
 				<BlockGenusMember>ke-motor-run</BlockGenusMember>
@@ -12804,7 +12803,7 @@
 				<BlockGenusMember>ke-servo</BlockGenusMember>																		
 			</BlockDrawer> 	
 
-			-->
+
 			<!--
 			<BlockDrawer button-color="152 29 155" name="bd.jerusalab" type="factory">
 				<BlockGenusMember>midi_command</BlockGenusMember>
