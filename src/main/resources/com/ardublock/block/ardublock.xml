@@ -12239,6 +12239,7 @@
 				<BlockGenusMember>attachInterrupt</BlockGenusMember>
 				<BlockGenusMember>detachInterrupt</BlockGenusMember>
 				<BlockGenusMember>m_Rising</BlockGenusMember>
+				<BlockGenusMember>debounce</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer button-color="29 152 155" name="bd.pins" type="factory">
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
@@ -12823,7 +12824,6 @@
 				<BlockGenusMember>RFID_ReadCard</BlockGenusMember>
 				<BlockGenusMember>RFID_WriteCard</BlockGenusMember>
 				<BlockGenusMember>ADXL335_AngleX</BlockGenusMember>
-				<BlockGenusMember>debounce</BlockGenusMember>
 				<BlockGenusMember>IRSend</BlockGenusMember>
 				<BlockGenusMember>Decode_Type_NEC</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_Init</BlockGenusMember>
