@@ -11085,7 +11085,7 @@
 
 		<BlockGenus name="MotorShield" initlabel="bg.MotorShield" kind="command" color="0 255 0">
 			<description>
-				<text>L298P Motor shield,it can control two motor </text>
+				<text>L298P Motor shield,it can control One motor </text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.Motor">
@@ -11104,7 +11104,24 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
+		<BlockGenus name="SimplifiedMotorShield" initlabel="bg.SimplifiedMotorShield" kind="command" color="0 255 0">
+			<description>
+				<text>Simplified L298P Motor shield control,it can control two motor </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.FirstMotorSpeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.SecondMotorSpeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 		<!-- Interrupt-->
 		<BlockGenus name="attachInterrupt" initlabel="bg.attachInterrupt" kind="command" color="255 240 0">
 			<description>
@@ -12816,6 +12833,7 @@
 			<BlockDrawer button-color="20 150 30" name="bd.nhedu" type="factory">
 				<BlockGenusMember>Stepper_Ini</BlockGenusMember>
 				<BlockGenusMember>Stepper_step</BlockGenusMember>
+				<BlockGenusMember>SimplifiedMotorShield</BlockGenusMember>
 				<BlockGenusMember>MotorShield</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Print</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Clear</BlockGenusMember>
