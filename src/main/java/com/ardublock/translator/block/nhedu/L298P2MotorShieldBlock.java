@@ -16,12 +16,21 @@ public class L298P2MotorShieldBlock extends TranslatorBlock {
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
         String firstMotorSpeed,secondMotorSpeed;
 
-        translator.addSetupCommand("pinMode(M1, OUTPUT); \n" +
-                "pinMode(M2, OUTPUT);\n" );
-        translator.addDefinitionCommand("int E1 = 5;  //PWMA\n" +
-                "int M1 = 4;  //DIRA\n" +
-                "int E2 = 6;  //PWMB             \n" +
-                "int M2 = 7;  //DIRB\n" +
+        translator.addSetupCommand("pinMode(L298PM1, OUTPUT); \n" +
+                "pinMode(L298PM2, OUTPUT);\n" );
+        translator.addDefinitionCommand("#ifndef L298PE1\n" +
+                "  #define  L298PE1   5  //PWMA\n" +
+                "#endif\n" +
+                "#ifndef  L298PM1\n" +
+                "  #define  L298PM1   4  //DIRA\n" +
+                "#endif\n" +
+                "#ifndef  L298PE2\n" +
+                "  #define  L298PE2   6  //PWMB\n" +
+                "#endif\n" +
+                "#ifndef  L298PM2\n" +
+                "  #define  L298PM2   7  //DIRB\n" +
+                "#endif\n" +
+                "\n" +
                 "void nhedu_L298PTwoMotor(int firstMotorSpeed,int secondMotorSpeed)\n" +
                 "{\n" +
                 "  if(firstMotorSpeed<-255)firstMotorSpeed=-255;\n" +
@@ -30,23 +39,27 @@ public class L298P2MotorShieldBlock extends TranslatorBlock {
                 "  if(secondMotorSpeed>255)secondMotorSpeed=255;\n" +
                 "  if(firstMotorSpeed>=0)\n" +
                 "  {\n" +
-                "    digitalWrite(M1,true);\n" +
-                "    analogWrite(E1,firstMotorSpeed);\n"+
-                "  }else\n"+
+                "    digitalWrite( L298PM1,true);\n" +
+                "    analogWrite( L298PE1,firstMotorSpeed);\n" +
+                "  }\n" +
+                "  else\n" +
                 "  {\n" +
-                "    digitalWrite(M1,false);\n" +
-                "    analogWrite(E1,-firstMotorSpeed);\n"+
-                "  }\n"+
+                "    digitalWrite( L298PM1,false);\n" +
+                "    analogWrite( L298PE1,-firstMotorSpeed);\n" +
+                "  }\n" +
                 "  if(secondMotorSpeed>=0)\n" +
                 "  {\n" +
-                "    digitalWrite(M2,true);\n" +
-                "    analogWrite(E2,secondMotorSpeed);\n"+
-                "  }else\n"+
+                "    digitalWrite( L298PM2,true);\n" +
+                "    analogWrite( L298PE2,secondMotorSpeed);\n" +
+                "  }\n" +
+                "  else\n" +
                 "  {\n" +
-                "    digitalWrite(M2,false);\n" +
-                "    analogWrite(E2,-secondMotorSpeed);\n"+
-                "  }\n"+
-                "}\n");
+                "    digitalWrite( L298PM2,false);\n" +
+                "    analogWrite( L298PE2,-secondMotorSpeed);\n" +
+                "  }\n" +
+                "}"
+
+        );
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
         firstMotorSpeed=translatorBlock.toCode();
         translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
