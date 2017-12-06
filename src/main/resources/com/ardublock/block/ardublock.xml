@@ -11122,6 +11122,11 @@
 					<DefaultArg genus-name="pinListDigital_D7" label="D7" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 		<BlockGenus name="SimplifiedMotorShield" initlabel="bg.SimplifiedMotorShield" kind="command" color="0 255 0">
 			<description>
