@@ -39,12 +39,12 @@ public class L298P2MotorShieldBlock extends TranslatorBlock {
                 "  if(secondMotorSpeed>255)secondMotorSpeed=255;\n" +
                 "  if(firstMotorSpeed>=0)\n" +
                 "  {\n" +
-                "    digitalWrite( L298PM1,true);\n" +
+                "    digitalWrite( L298PM1,false);\n" +
                 "    analogWrite( L298PE1,firstMotorSpeed);\n" +
                 "  }\n" +
                 "  else\n" +
                 "  {\n" +
-                "    digitalWrite( L298PM1,false);\n" +
+                "    digitalWrite( L298PM1,true);\n" +
                 "    analogWrite( L298PE1,-firstMotorSpeed);\n" +
                 "  }\n" +
                 "  if(secondMotorSpeed>=0)\n" +
