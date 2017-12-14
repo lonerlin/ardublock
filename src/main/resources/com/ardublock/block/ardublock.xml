@@ -11085,7 +11085,7 @@
 		<!--L298N-->
 		<BlockGenus name="L298NMotorShield_Ini" initlabel="bg.L289NMotorShield_Ini" kind="command" color="0 255 0">
 			<description>
-				<text>Set L298N MotorShield E1,M1,E2,M2 Pointer</text>
+				<text>Set L298N MotorShield IN1,IN2,IN3,IN4 Pointer</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN1">
@@ -11103,7 +11103,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+					<FileLocation>com/ardublock/block/nhedu/L289NMotorControlModule.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -11113,16 +11113,16 @@
 				<text>Simplified L298P Motor shield control,it can control two motor </text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-kind="socket" connector-type="number" label="bc.FirstMotorSpeed">
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.L298NFirstMotorSpeed">
 					<DefaultArg genus-name="number" label="100" />
 				</BlockConnector>
-				<BlockConnector connector-kind="socket" connector-type="number" label="bc.SecondMotorSpeed">
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.L298NSecondMotorSpeed">
 					<DefaultArg genus-name="number" label="100" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+					<FileLocation>com/ardublock/block/nhedu/L289NMotorControlModule.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
