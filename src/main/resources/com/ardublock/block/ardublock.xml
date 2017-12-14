@@ -11082,7 +11082,53 @@
 
 
 		<!-- self-define Block -->
+		<!--L298N-->
+		<BlockGenus name="L298NMotorShield_Ini" initlabel="bg.L289NMotorShield_Ini" kind="command" color="0 255 0">
+			<description>
+				<text>Set L298N MotorShield E1,M1,E2,M2 Pointer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN1">
+					<DefaultArg genus-name="pinListDigital_D4" label="D5" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN2">
+					<DefaultArg genus-name="pinListDigital_D5" label="D6" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN3">
+					<DefaultArg genus-name="pinListDigital_D6" label="D9" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN4">
+					<DefaultArg genus-name="pinListDigital_D7" label="D10" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 
+		<BlockGenus name="L298NMotorShield" initlabel="bg.L298NMotorShield" kind="command" color="0 255 0">
+			<description>
+				<text>Simplified L298P Motor shield control,it can control two motor </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.FirstMotorSpeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.SecondMotorSpeed">
+					<DefaultArg genus-name="number" label="100" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/nhedu/MotorShield.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		<!--END L298N-->
+
+		<!--L298P-->
 		<BlockGenus name="MotorShield" initlabel="bg.MotorShield" kind="command" color="0 255 0">
 			<description>
 				<text>L298P Motor shield,it can control One motor </text>
@@ -11146,6 +11192,8 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		<!--L298P-->
+
 		<!-- Interrupt-->
 		<BlockGenus name="attachInterrupt" initlabel="bg.attachInterrupt" kind="command" color="255 240 0">
 			<description>
@@ -12860,6 +12908,8 @@
 				<BlockGenusMember>MotorShield_Ini</BlockGenusMember>
 				<BlockGenusMember>SimplifiedMotorShield</BlockGenusMember>
 				<BlockGenusMember>MotorShield</BlockGenusMember>
+				<BlockGenusMember>L298NMotorShield_Ini</BlockGenusMember>
+				<BlockGenusMember>L298NMotorShield</BlockGenusMember>>
 				<BlockGenusMember>LCD_I2C_Print</BlockGenusMember>
 				<BlockGenusMember>LCD_I2C_Clear</BlockGenusMember>
 				<BlockGenusMember>RFID_Ini</BlockGenusMember>
