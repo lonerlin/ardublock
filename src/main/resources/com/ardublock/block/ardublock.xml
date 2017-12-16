@@ -11129,7 +11129,7 @@
 		<!--END L298N-->
 
 		<!--L298P-->
-		<BlockGenus name="MotorShield" initlabel="bg.MotorShield" kind="command" color="0 255 0">
+		<BlockGenus name="MotorShield" initlabel="bg.MotorShield" kind="command" color="63 133 185">
 			<description>
 				<text>L298P Motor shield,it can control One motor </text>
 			</description>
@@ -11150,7 +11150,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="MotorShield_Ini" initlabel="bg.MotorShield_Ini" kind="command" color="0 255 0">
+		<BlockGenus name="MotorShield_Ini" initlabel="bg.MotorShield_Ini" kind="command" color="63 133 185">
 			<description>
 				<text>Set MotorShield E1,M1,E2,M2 Pointer</text>
 			</description>
@@ -11174,7 +11174,7 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="SimplifiedMotorShield" initlabel="bg.SimplifiedMotorShield" kind="command" color="0 255 0">
+		<BlockGenus name="SimplifiedMotorShield" initlabel="bg.SimplifiedMotorShield" kind="command" color="63 133 185">
 			<description>
 				<text>Simplified L298P Motor shield control,it can control two motor </text>
 			</description>
