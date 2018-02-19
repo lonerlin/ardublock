@@ -11082,6 +11082,47 @@
 
 
 		<!-- self-define Block -->
+		<!--PS2X-->
+		<BlockGenus name="PS2X_Ini" initlabel="bg.PS2X_Ini" kind="command" color="125 125 125">
+			<description>
+				<text>Set PS2X CLK,SEL,CMD,DAT Pointer </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CLK">
+					<DefaultArg genus-name="pinListDigital_D4" label="D12" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_SEL">
+					<DefaultArg genus-name="pinListDigital_D5" label="D10" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CMD">
+					<DefaultArg genus-name="pinListDigital_D6" label="D11" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_DAT">
+					<DefaultArg genus-name="pinListDigital_D7" label="D13" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Pressed_L1" initlabel="bg.PS2X_Pressed_L1" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Pressed_L2" initlabel="bg.PS2X_Pressed_L2" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Pressed_R1" initlabel="bg.PS2X_Pressed_R1" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Pressed_R2" initlabel="bg.PS2X_Pressed_R2" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<!--END PS2X-->
 		<!--L298N-->
 		<BlockGenus name="L298NMotorShield_Ini" initlabel="bg.L289NMotorShield_Ini" kind="command" color="0 255 0">
 			<description>
@@ -11631,6 +11672,12 @@
 	<BlockFamilies>
 
 		<!--self-define BlockFamilies -->
+		<BlockFamily>
+			<FamilyMember>PS2X_Pressed_L1</FamilyMember>
+			<FamilyMember>PS2X_Pressed_L2</FamilyMember>
+			<FamilyMember>PS2X_Pressed_R1</FamilyMember>
+			<FamilyMember>PS2X_Pressed_R2</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>m_Low</FamilyMember>
 			<FamilyMember>m_Change</FamilyMember>
@@ -12926,7 +12973,9 @@
 				<BlockGenusMember>EasyFPM_Delete</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_GetCount</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_ErrorMessage</BlockGenusMember>
-
+				<BlockGenusMember>PS2X_Ini</BlockGenusMember>
+				<BlockGenusMember>PS2X_Pressed_L1</BlockGenusMember>
+				
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
