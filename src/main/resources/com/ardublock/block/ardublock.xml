@@ -11089,16 +11089,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CLK">
-					<DefaultArg genus-name="pinListDigital_D4" label="D12" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_SEL">
-					<DefaultArg genus-name="pinListDigital_D5" label="D10" />
+					<DefaultArg genus-name="pinListDigital_D12" label="D12" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CMD">
-					<DefaultArg genus-name="pinListDigital_D6" label="D11" />
+					<DefaultArg genus-name="pinListDigital_D11" label="D11" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_SEL">
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_DAT">
-					<DefaultArg genus-name="pinListDigital_D7" label="D13" />
+					<DefaultArg genus-name="pinListDigital_D13" label="D13" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -12975,7 +12975,7 @@
 				<BlockGenusMember>EasyFPM_ErrorMessage</BlockGenusMember>
 				<BlockGenusMember>PS2X_Ini</BlockGenusMember>
 				<BlockGenusMember>PS2X_Pressed_L1</BlockGenusMember>
-				
+
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
