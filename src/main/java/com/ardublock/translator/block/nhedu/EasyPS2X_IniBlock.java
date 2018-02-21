@@ -26,6 +26,6 @@ public class EasyPS2X_IniBlock extends TranslatorBlock {
         dat=translatorBlock.toCode();
         translator.addSetupCommand("eps.config_gamepad("+clk+","+cmd+","+sel+","+dat+");");
 
-        return codePrefix+" eps.update();"+codeSuffix;
+        return codePrefix+" eps.update();\n \t delay(10);"+codeSuffix;
     }
 }

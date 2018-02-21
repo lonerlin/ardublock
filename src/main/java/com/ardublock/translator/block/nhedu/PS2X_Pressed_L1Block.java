@@ -24,6 +24,6 @@ public class PS2X_Pressed_L1Block extends TranslatorBlock {
         ret=ret+"\n } \n";
         translator.addDefinitionCommand(ret);
         translator.addSetupCommand("eps.setPressedEvent(PSB_L1,L1_Pressed);");
-        return null;
+        return "";
     }
 }

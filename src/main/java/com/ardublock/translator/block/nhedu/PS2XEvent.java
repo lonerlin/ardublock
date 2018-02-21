@@ -14,7 +14,7 @@ public class PS2XEvent extends TranslatorBlock {
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
 
-        return null;
+        return "";
 
     }
 
