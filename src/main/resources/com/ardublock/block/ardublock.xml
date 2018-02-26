@@ -11162,6 +11162,68 @@
 				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
 			</BlockConnectors>
 		</BlockGenus>
+
+		<BlockGenus name="PS2X_Held_L1" initlabel="bg.PS2X_Held_L1" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_L2" initlabel="bg.PS2X_Held_L2" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_R1" initlabel="bg.PS2X_Held_R1" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_R2" initlabel="bg.PS2X_Held_R2" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_TRIANGLE" initlabel="bg.PS2X_Held_TRIANGLE" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_CIRCLE" initlabel="bg.PS2X_Held_CIRCLE" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_CROSS" initlabel="bg.PS2X_Held_CROSS" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_SQUARE" initlabel="bg.PS2X_Held_SQUARE" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_UP" initlabel="bg.PS2X_Held_UP" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_DOWN" initlabel="bg.PS2X_Held_DOWN" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_LEFT" initlabel="bg.PS2X_Held_LEFT" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="PS2X_Held_RIGHT" initlabel="bg.PS2X_Held_RIGHT" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector label="bc.commands" connector-kind="socket" connector-type="cmd" />
+			</BlockConnectors>
+		</BlockGenus>
+
 		<BlockGenus name="PS2X_Stick_LY" initlabel="bg.PS2X_Stick_LY" kind="data" color="125 125 125">
 			<BlockConnectors>
 				<BlockConnector connector-kind="plug" connector-type="number" />
@@ -11745,6 +11807,20 @@
 			<FamilyMember>PS2X_Pressed_L2</FamilyMember>
 			<FamilyMember>PS2X_Pressed_R1</FamilyMember>
 			<FamilyMember>PS2X_Pressed_R2</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>PS2X_Held_TRIANGLE</FamilyMember>
+			<FamilyMember>PS2X_Held_CIRCLE</FamilyMember>
+			<FamilyMember>PS2X_Held_CROSS</FamilyMember>
+			<FamilyMember>PS2X_Held_SQUARE</FamilyMember>
+			<FamilyMember>PS2X_Held_UP</FamilyMember>
+			<FamilyMember>PS2X_Held_DOWN</FamilyMember>
+			<FamilyMember>PS2X_Held_LEFT</FamilyMember>
+			<FamilyMember>PS2X_Held_RIGHT</FamilyMember>
+			<FamilyMember>PS2X_Held_L1</FamilyMember>
+			<FamilyMember>PS2X_Held_L2</FamilyMember>
+			<FamilyMember>PS2X_Held_R1</FamilyMember>
+			<FamilyMember>PS2X_Held_R2</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>PS2X_Stick_LY</FamilyMember>
@@ -13051,7 +13127,9 @@
 			<BlockDrawer name="bg.MegaCar" button-color="120 120 120" type="default">
 				<BlockGenusMember>PS2X_Ini</BlockGenusMember>
 				<BlockGenusMember>PS2X_Pressed_TRIANGLE</BlockGenusMember>
+				<BlockGenusMember>PS2X_Held_TRIANGLE</BlockGenusMember>
 				<BlockGenusMember>PS2X_Stick_LY</BlockGenusMember>
+				<BlockGenusMember>servo_default</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
