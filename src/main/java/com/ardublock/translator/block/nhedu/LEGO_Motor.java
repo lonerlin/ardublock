@@ -16,14 +16,19 @@ public class LEGO_Motor extends TranslatorBlock {
 
         return null;
     }
-    protected String buildCode()throws SocketNullException, SubroutineNotDeclaredException, BlockException
+    protected String buildCode(int motorIndex)throws SocketNullException, SubroutineNotDeclaredException, BlockException
     {
+        String mName=String.valueOf(motorIndex);
         String ret="";
         translator.addHeaderFile("Encoder.h");
         translator.addHeaderFile("PID_v1.h");
         translator.addHeaderFile("BricktronicsMotor.h");
         translator.addHeaderFile("BricktronicsMegashield.h");
-        translator.addDefinitionCommand("BricktronicsMotor m1(BricktronicsMegashield::MOTOR_1);");
+        translator.addDefinitionCommand("BricktronicsMotor m"+mName+"(BricktronicsMegashield::MOTOR_"+mName+");");
+        translator.addSetupCommand("m"+mName+".begin();");
+
+        TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
+        ret="m"+mName+".setFixedDrive("+translatorBlock.toCode()+");\n";
         return ret;
     }
 }

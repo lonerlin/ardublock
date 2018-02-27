@@ -11245,6 +11245,50 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<!--END PS2X-->
+		<!--LEGO MOTOR-->
+		<BlockGenus name="LEGO_Motor_M1" initlabel="bg.LEGO_Motor_M1" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEGO_Motor_M2" initlabel="bg.LEGO_Motor_M2" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEGO_Motor_M3" initlabel="bg.LEGO_Motor_M3" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEGO_Motor_M4" initlabel="bg.LEGO_Motor_M4" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEGO_Motor_M5" initlabel="bg.LEGO_Motor_M5" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="LEGO_Motor_M6" initlabel="bg.LEGO_Motor_M6" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.LEGO_Motor_Speed">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<!--END LEGO MOTOR-->
 		<!--L298N-->
 		<BlockGenus name="L298NMotorShield_Ini" initlabel="bg.L289NMotorShield_Ini" kind="command" color="0 255 0">
 			<description>
@@ -11827,6 +11871,14 @@
 			<FamilyMember>PS2X_Stick_LX</FamilyMember>
 			<FamilyMember>PS2X_Stick_RY</FamilyMember>
 			<FamilyMember>PS2X_Stick_RX</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>LEGO_Motor_M1</FamilyMember>
+			<FamilyMember>LEGO_Motor_M2</FamilyMember>
+			<FamilyMember>LEGO_Motor_M3</FamilyMember>
+			<FamilyMember>LEGO_Motor_M4</FamilyMember>
+			<FamilyMember>LEGO_Motor_M5</FamilyMember>
+			<FamilyMember>LEGO_Motor_M6</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>m_Low</FamilyMember>
@@ -13130,6 +13182,7 @@
 				<BlockGenusMember>PS2X_Held_TRIANGLE</BlockGenusMember>
 				<BlockGenusMember>PS2X_Stick_LY</BlockGenusMember>
 				<BlockGenusMember>servo_default</BlockGenusMember>
+				<BlockGenusMember>LEGO_Motor_M1</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
