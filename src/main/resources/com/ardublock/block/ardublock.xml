@@ -11089,16 +11089,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CLK">
-					<DefaultArg genus-name="pinListDigital_D12" label="D12" />
+					<DefaultArg genus-name="pinListDigital_D17" label="D17" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_CMD">
-					<DefaultArg genus-name="pinListDigital_D11" label="D11" />
+					<DefaultArg genus-name="pinListDigital_D15" label="D15" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_SEL">
-					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
+					<DefaultArg genus-name="pinListDigital_D16" label="D16" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.PS2X_DAT">
-					<DefaultArg genus-name="pinListDigital_D13" label="D13" />
+					<DefaultArg genus-name="pinListDigital_D14" label="D14" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
