@@ -14,6 +14,6 @@ public class PS2X_Stick_LYBlock extends TranslatorBlock{
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return codePrefix+"getStickLY()"+codeSuffix;
+        return codePrefix+"eps.getStickLY()"+codeSuffix;
     }
 }

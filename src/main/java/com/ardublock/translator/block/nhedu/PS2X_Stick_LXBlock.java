@@ -14,6 +14,6 @@ public class PS2X_Stick_LXBlock extends TranslatorBlock{
 
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        return codePrefix+"getStickLX()"+codeSuffix;
+        return codePrefix+"eps.getStickLX()"+codeSuffix;
     }
 }
