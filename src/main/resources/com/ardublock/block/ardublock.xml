@@ -11289,6 +11289,22 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<!--END LEGO MOTOR-->
+
+		<BlockGenus name="nhedu_servo" kind="command" color="125 133 125" initlabel="bg.nhedu_servo">
+			<description>
+				<text>Servo </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="pinListDigital_D7" label="D7"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+
+		</BlockGenus>
+
 		<!--L298N-->
 		<BlockGenus name="L298NMotorShield_Ini" initlabel="bg.L289NMotorShield_Ini" kind="command" color="0 255 0">
 			<description>
@@ -13181,7 +13197,7 @@
 				<BlockGenusMember>PS2X_Pressed_TRIANGLE</BlockGenusMember>
 				<BlockGenusMember>PS2X_Held_TRIANGLE</BlockGenusMember>
 				<BlockGenusMember>PS2X_Stick_LY</BlockGenusMember>
-				<BlockGenusMember>servo_default</BlockGenusMember>
+				<BlockGenusMember>nhedu_servo</BlockGenusMember>
 				<BlockGenusMember>LEGO_Motor_M1</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
