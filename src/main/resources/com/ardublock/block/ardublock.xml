@@ -11289,7 +11289,40 @@
 			</BlockConnectors>
 		</BlockGenus>
 		<!--END LEGO MOTOR-->
-
+		<!--Chopper constant current stepper motor-->
+		<BlockGenus name="nhedu_stepper_Ini" initlabel="bg.nhedu_stepper" kind="command" color="125 125 125">
+			<description>
+				<text>Initialize and set the pin of the stepper motor controller </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.EN1">
+					<DefaultArg genus-name="pinListDigital_D8" label="D8" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.DIR1">
+					<DefaultArg genus-name="pinListDigital_D9" label="D9" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.STP1">
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.EN2">
+					<DefaultArg genus-name="pinListDigital_D13" label="D13" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.DIR2">
+					<DefaultArg genus-name="pinListDigital_D12" label="D12" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.STP2">
+					<DefaultArg genus-name="pinListDigital_D11" label="D11" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="nhedu_stepper_direction" initlabel="bg.nhedu_stepper_direction" kind="command" color="125 125 125">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.stepper_direction">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<!--ENd Chopper constant current stepper motor-->
 		<BlockGenus name="nhedu_servo" kind="command" color="125 133 125" initlabel="bg.nhedu_servo">
 			<description>
 				<text>Servo </text>
@@ -11312,16 +11345,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN1">
-					<DefaultArg genus-name="pinListDigital_D4" label="D5" />
+					<DefaultArg genus-name="pinListDigital_D5" label="D5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN2">
-					<DefaultArg genus-name="pinListDigital_D5" label="D6" />
+					<DefaultArg genus-name="pinListDigital_D6" label="D6" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN3">
-					<DefaultArg genus-name="pinListDigital_D6" label="D9" />
+					<DefaultArg genus-name="pinListDigital_D9" label="D9" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.L298NIN4">
-					<DefaultArg genus-name="pinListDigital_D7" label="D10" />
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -13199,6 +13232,8 @@
 				<BlockGenusMember>PS2X_Stick_LY</BlockGenusMember>
 				<BlockGenusMember>nhedu_servo</BlockGenusMember>
 				<BlockGenusMember>LEGO_Motor_M1</BlockGenusMember>
+				<BlockGenusMember>nhedu_stepper_Ini</BlockGenusMember>
+				<BlockGenusMember>nhedu_stepper_direction</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
