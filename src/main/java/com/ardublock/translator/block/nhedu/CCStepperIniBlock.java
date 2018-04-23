@@ -31,20 +31,20 @@ public class CCStepperIniBlock extends TranslatorBlock {
                 "  digitalWrite(CCStepper_EN1,HIGH);\n" +
                 "  pinMode(CCStepper_EN2,OUTPUT);\n" +
                 "  pinMode(CCStepper_DIR2,OUTPUT);\n" +
-                "  digitalWrite(CCStepper_EN1,HIGH);\n");
+                "  digitalWrite(CCStepper_EN2,HIGH);\n");
         translator.addDefinitionCommand("void setSteppersDirection(int direction)\n" +
                 "{\n" +
                 "  if(direction>0)\n" +
                 "  {\n" +
                 "       digitalWrite(CCStepper_DIR1,HIGH);\n" +
-                "       digitalWrite(CCStepper_DIR1,LOW);\n" +
+                "       digitalWrite(CCStepper_DIR2,LOW);\n" +
                 "        analogWrite(CCStepper_STP1,128);\n" +
                 "        analogWrite(CCStepper_STP2,128);\n" +
                 "  }\n" +
                 "  else if(direction<0)\n" +
                 "  {\n" +
-                "       digitalWrite(CCStepper_DIR1,HIGH);\n" +
                 "       digitalWrite(CCStepper_DIR1,LOW);\n" +
+                "       digitalWrite(CCStepper_DIR2,HIGH);\n" +
                 "       analogWrite(CCStepper_STP1,128);\n" +
                 "       analogWrite(CCStepper_STP2,128);\n" +
                 "  }\n" +
