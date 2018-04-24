@@ -11322,6 +11322,25 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="nhedu_CCStepper" initlabel="bg.nhedu_CCStepper" kind="command" color="125 125 125">
+			<description>
+				<text>one stepper motor controller </text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.EN">
+					<DefaultArg genus-name="pinListDigital_D8" label="D8" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.DIR">
+					<DefaultArg genus-name="pinListDigital_D9" label="D9" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.STP">
+					<DefaultArg genus-name="pinListDigital_D10" label="D10" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.stepper_direction">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!--ENd Chopper constant current stepper motor-->
 		<BlockGenus name="nhedu_servo" kind="command" color="125 133 125" initlabel="bg.nhedu_servo">
 			<description>
