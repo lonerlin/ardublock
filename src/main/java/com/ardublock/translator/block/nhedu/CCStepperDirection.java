@@ -16,7 +16,7 @@ public class CCStepperDirection extends TranslatorBlock {
         String stepperDirection;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
         stepperDirection=translatorBlock.toCode();
-        String ret="setSteppersDirection("+stepperDirection+")\n";
+        String ret="setSteppersDirection("+stepperDirection+");\n";
         return codePrefix+ret+codeSuffix;
 
     }
