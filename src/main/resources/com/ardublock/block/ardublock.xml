@@ -13253,6 +13253,7 @@
 				<BlockGenusMember>LEGO_Motor_M1</BlockGenusMember>
 				<BlockGenusMember>nhedu_stepper_Ini</BlockGenusMember>
 				<BlockGenusMember>nhedu_stepper_direction</BlockGenusMember>
+				<BlockGenusMember>nhedu_CCStepper</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
