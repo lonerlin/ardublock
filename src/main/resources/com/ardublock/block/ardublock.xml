@@ -13251,13 +13251,12 @@
 				<BlockGenusMember>PS2X_Stick_LY</BlockGenusMember>
 				<BlockGenusMember>nhedu_servo</BlockGenusMember>
 				<BlockGenusMember>LEGO_Motor_M1</BlockGenusMember>
-				<BlockGenusMember>nhedu_stepper_Ini</BlockGenusMember>
-				<BlockGenusMember>nhedu_stepper_direction</BlockGenusMember>
 				<BlockGenusMember>nhedu_CCStepper</BlockGenusMember>
 			</BlockDrawer>
 			<!-- end self-define BlockDrawer-->
 			<!--
-
+				<BlockGenusMember>nhedu_stepper_Ini</BlockGenusMember>
+				<BlockGenusMember>nhedu_stepper_direction</BlockGenusMember>
 			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
 				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
 				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
