@@ -22,6 +22,6 @@ public class L298NMotorControlModel_IinBlcok extends TranslatorBlock {
         translator.addDefinitionCommand("#define  L298NIN3  "+translatorBlock.toCode());
         translatorBlock=this.getRequiredTranslatorBlockAtSocket(3);
         translator.addDefinitionCommand("#define  L298NIN4  "+translatorBlock.toCode());
-        return null;
+        return "";
     }
 }

@@ -21,6 +21,6 @@ public class L298PMotorShield_IniBlock extends TranslatorBlock {
         translator.addDefinitionCommand("#define  L298PE2  "+translatorBlock.toCode());
         translatorBlock=this.getRequiredTranslatorBlockAtSocket(3);
         translator.addDefinitionCommand("#define  L298PM2  "+translatorBlock.toCode());
-        return null;
+        return "";
     }
 }

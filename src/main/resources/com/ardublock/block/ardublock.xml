@@ -11327,9 +11327,11 @@
 				<text>one stepper motor controller </text>
 			</description>
 			<BlockConnectors>
+				<!--
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.EN">
 					<DefaultArg genus-name="pinListDigital_D8" label="D8" />
 				</BlockConnector>
+				-->
 				<BlockConnector connector-kind="socket" connector-type="number" label="bc.DIR">
 					<DefaultArg genus-name="pinListDigital_D9" label="D9" />
 				</BlockConnector>

@@ -15,18 +15,14 @@ public class CCStepperOneMotor extends TranslatorBlock {
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
         String en,dir,stp,value;
         TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
-        en=translatorBlock.toCode();
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
         dir=translatorBlock.toCode();
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(2);
+        translatorBlock=this.getRequiredTranslatorBlockAtSocket(1);
         stp=translatorBlock.toCode();
-        translatorBlock=this.getRequiredTranslatorBlockAtSocket(3);
+        translatorBlock=this.getRequiredTranslatorBlockAtSocket(2);
         value=translatorBlock.toCode();
-        translator.addDefinitionCommand("void setStepperDirectionOneMotor(int en,int dir,int stp,int direction)\n" +
+        translator.addDefinitionCommand("void setStepperDirectionOneMotor(int dir,int stp,int direction)\n" +
                 "{\n" +
-                "  pinMode(en,OUTPUT);\n" +
                 "  pinMode(dir,OUTPUT);\n" +
-                "  digitalWrite(en,HIGH);\n" +
                 "  if(direction>0)\n" +
                 "  {\n" +
                 "      digitalWrite(dir,HIGH);\n" +
@@ -43,7 +39,7 @@ public class CCStepperOneMotor extends TranslatorBlock {
                 "   }\n" +
                 "   \n" +
                 "}\n");
-        String ret=" setStepperDirectionOneMotor("+en+","+dir+","+stp+","+value+");\n";
+        String ret=" setStepperDirectionOneMotor("+dir+","+stp+","+value+");\n";
         return codePrefix+ret+codeSuffix;
     }
 }

@@ -14,7 +14,7 @@ public class LEGO_Motor extends TranslatorBlock {
     @Override
     public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
 
-        return null;
+        return "";
     }
     protected String buildCode(int motorIndex)throws SocketNullException, SubroutineNotDeclaredException, BlockException
     {
