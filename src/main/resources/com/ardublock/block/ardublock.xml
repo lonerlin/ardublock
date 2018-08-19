@@ -11082,6 +11082,41 @@
 
 
 		<!-- self-define Block -->
+		<!--Arduino WiFi Shield-->
+		<BlockGenus name="WiFi_Ini" initlabel="bg.WiFi_Ini" kind="command" color="0 170 210">
+			<description>
+				<text>Arduino WiFi Shield initialize</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.Baud">
+					<DefaultArg genus-name="number" label="9600" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="SerialMessageReceived" initlabel="bg.SerialMessageReceived" kind="command" color="0 170 210" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="cmd" label="bc.commands"></BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="variable_Order" kind="data" initlabel="bg.variable_Order" editable-label="no" is-label-value="yes" color="245 245 245">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="variable_ParaOne" kind="data" initlabel="bg.variable_ParaOne" editable-label="no" is-label-value="yes" color="230 110 110">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="variable_ParaTwo" kind="data" initlabel="bg.variable_ParaTwo" editable-label="no" is-label-value="yes" color="230 110 110">
+
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<!--end Arduino WiFi Shield-->
 		<!--PS2X-->
 		<BlockGenus name="PS2X_Ini" initlabel="bg.PS2X_Ini" kind="command" color="125 125 125">
 			<description>
@@ -13245,6 +13280,13 @@
 				<BlockGenusMember>EasyFPM_Delete</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_GetCount</BlockGenusMember>
 				<BlockGenusMember>EasyFPM_ErrorMessage</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer name="bg.WiFiShield" button-color="0 130 180" type="default">
+				<BlockGenusMember>WiFi_Ini</BlockGenusMember>
+				<BlockGenusMember>SerialMessageReceived</BlockGenusMember>
+				<BlockGenusMember>variable_Order</BlockGenusMember>
+				<BlockGenusMember>variable_ParaOne</BlockGenusMember>
+				<BlockGenusMember>variable_ParaTwo</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer name="bg.MegaCar" button-color="120 120 120" type="default">
 				<BlockGenusMember>PS2X_Ini</BlockGenusMember>
