@@ -12,17 +12,19 @@ public class WiFiShieldEvent extends TranslatorBlock {
     }
 
     @Override
-    public String toCode() throws SocketNullException, SubroutineNotDeclaredException, BlockException {
-        String ret="void WiFiMessageEvent(String order,int paraOne,int paraTwo){\n";
-        TranslatorBlock translatorBlock=this.getRequiredTranslatorBlockAtSocket(0);
+    public String toCode() throws SocketNullException, SubroutineNotDeclaredException
+    {
+        translator.addSetupCommand("wSerial.setMessageEvent(WiFiMessageEvent);\n");
+        String ret;
+        ret="void WiFiMessageEvent(String order,int paraOne,int paraTwo){\n";
+        TranslatorBlock translatorBlock = getTranslatorBlockAtSocket(0);
         while (translatorBlock != null)
         {
-            ret = ret + "\t"+translatorBlock.toCode();
+            ret = ret + translatorBlock.toCode();
             translatorBlock = translatorBlock.nextTranslatorBlock();
         }
-        ret=ret+"\n } \n";
+        ret = ret + "}\n\n";
         translator.addDefinitionCommand(ret);
-        translator.addSetupCommand("wSerial.setMessageEvent(WiFiMessageEvent);");
-        return null;
+        return "";
     }
 }

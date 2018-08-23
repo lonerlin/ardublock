@@ -11093,11 +11093,12 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="SerialMessageReceived" initlabel="bg.SerialMessageReceived" kind="command" color="0 170 210" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="no">
+		<BlockGenus name="SerialMessageReceived" kind="command" color="0 170 210" initlabel="bg.SerialMessageReceived" >
 			<BlockConnectors>
-				<BlockConnector connector-kind="socket" connector-type="cmd" label="bc.commands"></BlockConnector>
+				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
+
 		<BlockGenus name="variable_Order" kind="data" initlabel="bg.variable_Order" editable-label="no" is-label-value="yes" color="245 245 245">
 
 			<BlockConnectors>
