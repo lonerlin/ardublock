@@ -11093,7 +11093,7 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="SerialMessageReceived" kind="command" color="0 170 210" initlabel="bg.SerialMessageReceived" >
+		<BlockGenus name="SerialMessageReceived" kind="command" color="0 170 210" initlabel="bg.SerialMessageReceived" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>

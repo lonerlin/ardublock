@@ -163,7 +163,10 @@ public class GenerateCodeButtonListener implements ActionListener
 					translator.setScoopProgram(true);
 					scoopBlockSet.add(renderableBlock);
 				}
-
+				if(block.getGenusName().equals("SerialMessageReceived"))
+				{
+					subroutineBlockSet.add(renderableBlock);
+				}
 			}
 		}
 		if (loopBlockSet.size() == 0) {
