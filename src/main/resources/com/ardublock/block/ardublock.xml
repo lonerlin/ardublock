@@ -11117,6 +11117,22 @@
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
+		<BlockGenus name="sendMessage" initlabel="bg.sendMessage" kind="command" color="0 170 210">
+			<description>
+				<text>Send Message to Computer.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-kind="socket" connector-type="string" label="bc.sendMessage_order">
+					<DefaultArg genus-name="message" label="sendOrder"/>
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.sendMessage_paraOne">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-kind="socket" connector-type="number" label="bc.sendMessage_paraTwo">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
 		<!--end Arduino WiFi Shield-->
 		<!--PS2X-->
 		<BlockGenus name="PS2X_Ini" initlabel="bg.PS2X_Ini" kind="command" color="125 125 125">
@@ -13288,6 +13304,7 @@
 				<BlockGenusMember>variable_Order</BlockGenusMember>
 				<BlockGenusMember>variable_ParaOne</BlockGenusMember>
 				<BlockGenusMember>variable_ParaTwo</BlockGenusMember>
+				<BlockGenusMember>sendMessage</BlockGenusMember>
 			</BlockDrawer>
 			<BlockDrawer name="bg.MegaCar" button-color="120 120 120" type="default">
 				<BlockGenusMember>PS2X_Ini</BlockGenusMember>
