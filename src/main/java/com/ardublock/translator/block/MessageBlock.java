@@ -29,7 +29,7 @@ public class MessageBlock extends TranslatorBlock
 		TranslatorBlock translatorBlock=this.getTranslatorBlockAtSocket(0);
 		if (translatorBlock != null)
 		{
-			ret = ret +"+" +translatorBlock.toCode();
+			ret = ret +" + " +translatorBlock.toCode() ;
 		}
 		return ret;
 	}
